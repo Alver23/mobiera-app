@@ -90,3 +90,6 @@ reports
 .idea/**/gradle.xml
 .idea/**/libraries
 
+.scannerwork
+.env
+

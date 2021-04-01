@@ -1,13 +1,17 @@
 // Dependencies
+const dotenv = require('dotenv');
 const gulp = require('gulp');
 const sonarqubeScanner = require('sonarqube-scanner');
 
+dotenv.config();
+
 const sonarOptions = {
-  'sonar.host.url': 'http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/',
-  'sonar.login': 'eafadd5e19c348041e3326695efe39f6d6a307a0',
+  'sonar.host.url': process.env.SONARQUBE_HOST_URL,
+  'sonar.login': process.env.SONARQUBE_TOKEN,
 };
 
 gulp.task('sonarqube', callback => {
+  console.log('process.env.SONARQUBE_HOST_URL', process.env.SONARQUBE_HOST_URL)
   sonarqubeScanner(
     {
       options: sonarOptions,

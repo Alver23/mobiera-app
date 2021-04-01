@@ -5,8 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "env": "cp ./config/environments/.env.production .env",
-    "env:dev": "cp ./config/environments/.env.development .env",
+    "env": "cat ./config/environments/.env ./config/environments/.env.production > .env",
+    "env:dev": "cat ./config/environments/.env ./config/environments/.env.development > .env",
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
@@ -36,6 +36,7 @@
     "babel-jest": "26.6.3",
     "babel-plugin-module-resolver": "4.1.0",
     "coveralls": "3.1.0",
+    "dotenv": "^8.2.0",
     "enzyme": "3.11.0",
     "enzyme-to-json": "3.6.1",
     "eslint": "7.14.0",
