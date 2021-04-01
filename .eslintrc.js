@@ -24,6 +24,7 @@ module.exports = {
       'ignorePackages',
       { ts: 'never', tsx: 'never' },
     ],
+    'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };
