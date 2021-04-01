@@ -22,7 +22,8 @@ module.exports = {
     'import/extensions': [
       'error',
       'ignorePackages',
-      {ts: 'never', tsx: 'never'},
+      { ts: 'never', tsx: 'never' },
     ],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };

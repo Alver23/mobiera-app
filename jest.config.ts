@@ -10,6 +10,7 @@ export default {
   coverageDirectory: 'coverage',
   displayName: 'mobiera-app',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testMatch: ['<rootDir>/src/**/+(*.)+(spec).+(tsx|ts)'],
   notify: true,
   reporters: [
     'default',
@@ -21,6 +22,7 @@ export default {
       },
     ],
   ],
+  roots: ['<rootDir>/src'],
   setupFilesAfterEnv: ['<rootDir>/config/jest/setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
 };
