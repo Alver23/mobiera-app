@@ -10,6 +10,9 @@ export default {
   coverageDirectory: 'coverage',
   displayName: 'mobiera-app',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  moduleNameMapper: {
+    '@mobiera/(.*)': '<rootDir>/src/$1',
+  },
   testMatch: ['<rootDir>/src/**/+(*.)+(spec).+(tsx|ts)'],
   notify: true,
   reporters: [
