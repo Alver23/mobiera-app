@@ -8,6 +8,11 @@ export default {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.ts',
+    '<rootDir>/src/**/*.tsx',
+    '!<rootDir>/src/**/interfaces/*.ts',
+  ],
   displayName: 'mobiera-app',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
