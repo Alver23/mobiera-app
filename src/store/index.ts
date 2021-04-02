@@ -1,6 +1,9 @@
 // Dependencies
 import { configureStore } from '@reduxjs/toolkit';
 
+// Reducers
+import rootReducer from './reducers';
+
 const enhancers: any = [];
 
 // eslint-disable-next-line no-undef
@@ -10,7 +13,7 @@ if (__DEV__) {
   );
 }
 
-const rootStore = configureStore({ reducer: {}, enhancers });
+const rootStore = configureStore({ reducer: rootReducer, enhancers });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof rootStore.getState>;
