@@ -6,7 +6,7 @@ import { IConfig } from './interfaces';
 
 const config: IConfig = {
   environment: Config.NODE_ENV,
-  defaultTimeout: parseInt(Config.DEFAULT_TIMEOUT, 10),
+  defaultTimeout: +Config.DEFAULT_TIMEOUT,
 };
 
 export default config;
