@@ -1,7 +1,11 @@
 // Dependencies
 import AsyncStorage from '@react-native-community/async-storage';
 import { reactotronRedux } from 'reactotron-redux';
-import Reactotron, { trackGlobalErrors, openInEditor, networking } from 'reactotron-react-native';
+import Reactotron, {
+  trackGlobalErrors,
+  openInEditor,
+  networking,
+} from 'reactotron-react-native';
 
 import { name } from '../../../../package.json';
 
@@ -17,8 +21,8 @@ const reactotron = Reactotron.setAsyncStorageHandler(AsyncStorage)
     }),
     openInEditor(),
     trackGlobalErrors({
-      veto: (frame) => frame.fileName.indexOf('/node_modules/react-native/') >= 0,
-    }),
+      veto: frame => frame.fileName.indexOf('/node_modules/react-native/') >= 0,
+    })
   )
   .useReactNative()
   .connect();

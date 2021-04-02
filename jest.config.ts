@@ -12,6 +12,7 @@ export default {
     '<rootDir>/src/**/*.tsx',
     '!<rootDir>/src/**/interfaces/*.ts',
   ],
+  coveragePathIgnorePatterns: ['src/core/tools'],
   displayName: 'mobiera-app',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
