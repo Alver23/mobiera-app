@@ -5,7 +5,9 @@ const enhancers: any = [];
 
 // eslint-disable-next-line no-undef
 if (__DEV__) {
-  import('../core/tools/reactotron/config').then((response) => enhancers.push(response.default.createEnhancer()));
+  import('../core/tools/reactotron/config').then(response =>
+    enhancers.push(response.default.createEnhancer())
+  );
 }
 
 const rootStore = configureStore({ reducer: {}, enhancers });
