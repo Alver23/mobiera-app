@@ -1,15 +1,20 @@
-/**
- * @format
- */
-
-import 'react-native';
+// Dependencies
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow, ShallowRendererProps } from 'enzyme';
 
+// Containers
 import App from '@mobiera/App';
 
-// Note: test renderer must be required after react-native.
+jest.mock('./core/tools/reactotron', () => jest.fn());
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+describe('App Component', () => {
+  let component: ShallowRendererProps;
+
+  beforeEach(() => {
+    component = shallow(<App />);
+  });
+
+  it('should save a snapshot of the component', () => {
+    expect(component).toMatchSnapshot();
+  });
 });

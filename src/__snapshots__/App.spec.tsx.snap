@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should save a snapshot of the component 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ThemeProvider
+    theme={
+      Object {
+        "Button": Object {
+          "buttonStyle": Object {
+            "height": 50,
+            "width": 312,
+          },
+          "containerStyle": Object {
+            "alignItems": "center",
+          },
+          "titleStyle": Object {
+            "fontFamily": "Helvetica",
+            "fontSize": 17,
+          },
+        },
+        "Input": Object {
+          "containerStyle": Object {
+            "alignItems": "center",
+          },
+          "inputContainerStyle": Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderRadius": 5,
+              "borderWidth": 2,
+              "height": 48,
+              "paddingHorizontal": 10,
+              "width": 312,
+            },
+          ],
+          "inputStyle": Object {
+            "fontSize": 17,
+          },
+        },
+        "Text": Object {
+          "h4Style": Object {
+            "fontSize": 30,
+          },
+          "style": Object {
+            "color": "#ffffff",
+            "fontFamily": "Helvetica",
+            "fontSize": 15,
+          },
+        },
+        "colors": Object {
+          "white": "#ffffff",
+        },
+      }
+    }
+    useDark={false}
+  >
+    <ForwardRef(SafeAreaView)
+      style={
+        Object {
+          "backgroundColor": "#F3F3F3",
+        }
+      }
+    >
+      <StatusBar
+        animated={false}
+        barStyle="dark-content"
+        showHideTransition="fade"
+      />
+      <View>
+        <Themed.Text>
+          App Mobiera
+        </Themed.Text>
+      </View>
+    </ForwardRef(SafeAreaView)>
+  </ThemeProvider>
+</Provider>
+`;

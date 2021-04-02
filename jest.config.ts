@@ -5,9 +5,14 @@
 
 export default {
   preset: 'react-native',
-  clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.ts',
+    '<rootDir>/src/**/*.tsx',
+    '!<rootDir>/src/**/interfaces/*.ts',
+  ],
+  coveragePathIgnorePatterns: ['src/core/tools'],
   displayName: 'mobiera-app',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
@@ -25,7 +30,10 @@ export default {
     ],
   ],
   roots: ['<rootDir>/src'],
-  setupFilesAfterEnv: ['<rootDir>/config/jest/setup.js'],
+  setupFiles: ['<rootDir>/config/jest/setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testResultsProcessor: 'jest-sonar-reporter',
+  transformIgnorePatterns: [
+    'node_modules/(?!react-native|@react-native-community|react-native-elements|@react-navigation)/',
+  ],
 };
