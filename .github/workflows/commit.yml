@@ -26,6 +26,7 @@ jobs:
       with:
         envkey_SONARQUBE_HOST_URL: ${{ secrets.SONARQUBE_HOST_URL }}
         envkey_SONARQUBE_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+        file_name: .env
     - run: npm ci
     - run: npm run lint
     - run: npm test
