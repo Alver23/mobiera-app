@@ -1,15 +1,18 @@
-/**
- * @format
- */
-
-import 'react-native';
+// Dependencies
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow, ShallowRendererProps } from 'enzyme';
 
+// Containers
 import App from '@mobiera/App';
 
-// Note: test renderer must be required after react-native.
+describe('App Component', () => {
+  let component: ShallowRendererProps;
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+  beforeEach(() => {
+    component = shallow(<App />);
+  });
+
+  it('should save a snapshot of the component', () => {
+    expect(component).toMatchSnapshot();
+  });
 });
