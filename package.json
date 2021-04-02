@@ -18,13 +18,15 @@
     "reactotron:enable:android": "adb reverse tcp:9090 tcp:9090",
     "start": "react-native start",
     "sonarqube": "gulp sonarqube",
-    "test": "jest --logHeapUsage"
+    "test": "jest --forceExit --detectOpenHandles --logHeapUsage",
+    "test:watch": "npm test -- --verbose --watch --no-cache"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "5.9.3",
     "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/react-hooks": "^5.1.1",
     "axios": "^0.21.1",
     "install": "^0.13.0",
     "npm": "^7.8.0",
@@ -86,7 +88,7 @@
     "@types/react": "17"
   },
   "jestSonar": {
-    "reportPath": "coverage",
+    "reportPath": "reports",
     "reportFile": "test-report.xml",
     "indent": 4
   }

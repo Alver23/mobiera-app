@@ -16,12 +16,7 @@ const fontFamily = {
   }),
 };
 
-export const customColors = {
-  white: '#ffffff',
-};
-
 export const theme = {
-  colors: { ...customColors },
   Text: {
     style: {
       color: white,
@@ -56,7 +51,7 @@ export const theme = {
         paddingHorizontal: 10,
         height: 48,
         width: 312,
-        backgroundColor: customColors.white,
+        backgroundColor: white,
       },
     ],
     inputStyle: {

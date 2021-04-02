@@ -1,8 +1,3 @@
-/*
- * For a detailed explanation regarding each configuration property and type check, visit:
- * https://jestjs.io/docs/en/configuration.html
- */
-
 export default {
   preset: 'react-native',
   collectCoverage: true,
@@ -11,6 +6,7 @@ export default {
     '<rootDir>/src/**/*.ts',
     '<rootDir>/src/**/*.tsx',
     '!<rootDir>/src/**/interfaces/*.ts',
+    '!<rootDir>/src/interfaces/**/*.ts',
   ],
   coveragePathIgnorePatterns: ['src/core/tools'],
   displayName: 'mobiera-app',

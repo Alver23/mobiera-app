@@ -56,31 +56,26 @@ exports[`App Component should save a snapshot of the component 1`] = `
             "fontSize": 15,
           },
         },
-        "colors": Object {
-          "white": "#ffffff",
-        },
       }
     }
     useDark={false}
   >
-    <ForwardRef(SafeAreaView)
-      style={
-        Object {
-          "backgroundColor": "#F3F3F3",
+    <AuthProvider>
+      <ForwardRef(SafeAreaView)
+        style={
+          Object {
+            "backgroundColor": "#F3F3F3",
+          }
         }
-      }
-    >
-      <StatusBar
-        animated={false}
-        barStyle="dark-content"
-        showHideTransition="fade"
-      />
-      <View>
-        <Themed.Text>
-          App Mobiera
-        </Themed.Text>
-      </View>
-    </ForwardRef(SafeAreaView)>
+      >
+        <StatusBarComponent />
+        <View>
+          <Themed.Text>
+            App Mobiera
+          </Themed.Text>
+        </View>
+      </ForwardRef(SafeAreaView)>
+    </AuthProvider>
   </ThemeProvider>
 </Provider>
 `;
