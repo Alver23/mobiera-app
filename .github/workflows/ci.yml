@@ -6,8 +6,6 @@ name: CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -27,3 +25,4 @@ jobs:
     - run: npm run lint
     - run: npm test
     - run: npm run coveralls
+    - run: npm run sonarqube
