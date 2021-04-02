@@ -21,9 +21,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env: # Or as an environment variable
-        SONARQUBE_HOST_URL: ${{ secrets.SONARQUBE_HOST_URL }}
-        SONARQUBE_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+    - name: Create .env file
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_SONARQUBE_HOST_URL: ${{ secrets.SONARQUBE_HOST_URL }}
+          envkey_SONARQUBE_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
     - run: npm ci
     - run: npm run lint
     - run: npm test
