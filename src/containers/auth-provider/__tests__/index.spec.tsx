@@ -14,7 +14,7 @@ import * as hooks from '../hooks';
 // Under test file
 import AuthProvider from '../index';
 
-describe('AuthProvider', () => {
+describe('<AuthProvider />', () => {
   let component: ShallowWrapper<PropsWithChildren<any>>;
 
   const FakeComponent = (): ReactElement => <></>;

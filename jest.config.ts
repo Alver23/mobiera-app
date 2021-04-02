@@ -7,6 +7,8 @@ export default {
     '<rootDir>/src/**/*.tsx',
     '!<rootDir>/src/**/interfaces/*.ts',
     '!<rootDir>/src/interfaces/**/*.ts',
+    '!<rootDir>/src/store/index.ts',
+    '!<rootDir>/src/store/reducers/index.ts',
   ],
   coveragePathIgnorePatterns: ['src/core/tools'],
   displayName: 'mobiera-app',

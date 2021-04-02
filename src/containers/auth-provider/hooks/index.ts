@@ -3,7 +3,10 @@ import React from 'react';
 
 // Interfaces
 import IMutableRefObject from '@mobiera/interfaces/mutable-ref';
-import IAuthContext from '@mobiera/containers/auth-provider/context/interfaces';
+import IAuthContext from '../context/interfaces';
+
+// Contexts
+import AuthContext from '../context';
 
 const useAuth = (): [IAuthContext, () => void] => {
   const initialState: IAuthContext = React.useMemo(
@@ -35,6 +38,10 @@ const useAuth = (): [IAuthContext, () => void] => {
   }, []);
 
   return [data, logout];
+};
+
+export const useAuthSession = (): IAuthContext => {
+  return React.useContext<IAuthContext>(AuthContext);
 };
 
 export default useAuth;
