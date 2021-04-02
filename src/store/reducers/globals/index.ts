@@ -18,7 +18,7 @@ const globalReducers = createReducer(initialState, {
   [appShowLoaderAction.type]: (
     state: IGlobalState,
     action: PayloadAction<boolean>
-  ) => {
+  ): IGlobalState => {
     return {
       ...state,
       showLoader: action.payload,

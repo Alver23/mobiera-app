@@ -5,7 +5,7 @@ import axios, { AxiosInstance } from 'axios';
 import config from '@mobiera/config';
 
 // Interceptors
-import responseInterceptor from './interceptors/response';
+import responseInterceptor from '@mobiera/core/axios/interceptors/reponse';
 
 const DEFAULT_TIMEOUT = config.defaultTimeout;
 

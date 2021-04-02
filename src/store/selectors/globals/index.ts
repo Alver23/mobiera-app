@@ -8,7 +8,8 @@ import {
   IGlobalState,
 } from '@mobiera/store/reducers/globals';
 
-export const selectGlobalState = (state: RootState) => state[globalFeatureKey];
+export const selectGlobalState = (state: RootState): IGlobalState =>
+  state[globalFeatureKey];
 
 export const selectAppLoader = createSelector(
   selectGlobalState,

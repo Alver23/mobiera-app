@@ -1,5 +1,5 @@
 // Under test file
-import responseInterceptor from '../response';
+import responseInterceptor from '../index';
 
 describe('responseInterceptor', () => {
   it('should get the data from response', () => {
