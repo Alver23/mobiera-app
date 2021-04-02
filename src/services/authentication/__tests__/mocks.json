@@ -1,0 +1,15 @@
+{
+  "userValid": {
+    "email": "fake@fake.com",
+    "password": "123456"
+  },
+  "userInvalid": {
+    "email": "fake",
+    "password": "123"
+  },
+  "userResponse": {
+    "id": 1,
+    "name": "fake",
+    "username": "fake"
+  }
+}

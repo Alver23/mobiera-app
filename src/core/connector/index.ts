@@ -1,13 +1,10 @@
 // Dependencies
 import { AxiosInstance, AxiosRequestConfig, AxiosError } from 'axios';
 
-// Internal axios instance
-import { internalAxiosInstance } from '@mobiera/core/axios/internal-axios-instance';
-
 // Connector
 import { connectorError } from './connector-error';
 
-export class Connector {
+class Connector {
   constructor(private readonly http: AxiosInstance) {}
 
   public get<T>(url: string, config: AxiosRequestConfig = {}): Promise<T> {
@@ -21,7 +18,7 @@ export class Connector {
 
   public post<T>(
     url: string,
-    body: any = {},
+    body: unknown = {},
     config: AxiosRequestConfig = {}
   ): Promise<T> {
     return new Promise<T>((resolve, reject) => {
@@ -34,7 +31,7 @@ export class Connector {
 
   public put<T>(
     url: string,
-    body: any,
+    body: unknown,
     config: AxiosRequestConfig = {}
   ): Promise<T> {
     return new Promise<T>((resolve, reject) => {
@@ -55,4 +52,4 @@ export class Connector {
   }
 }
 
-export default new Connector(internalAxiosInstance);
+export default Connector;
