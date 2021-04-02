@@ -22,10 +22,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Create .env file
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          envkey_SONARQUBE_HOST_URL: ${{ secrets.SONARQUBE_HOST_URL }}
-          envkey_SONARQUBE_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+      uses: SpicyPizza/create-envfile@v1
+      with:
+        envkey_SONARQUBE_HOST_URL: ${{ secrets.SONARQUBE_HOST_URL }}
+        envkey_SONARQUBE_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
     - run: npm ci
     - run: npm run lint
     - run: npm test
