@@ -26,5 +26,6 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-useless-constructor': 0,
   },
 };
