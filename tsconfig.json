@@ -1,6 +1,6 @@
-
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "target": "esnext",
     "module": "commonjs",
     "lib": ["es2017"],
@@ -12,9 +12,12 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "paths": {
+      "@mobiera/*": ["./*"]
+    },
     "skipLibCheck": false
   },
   "exclude": [
-    "node_modules", "babel.config.js", "metro.config.js", "jest.config.js"
+    "node_modules", "babel.config.js", "metro.config.js", "jest.config.ts"
   ]
 }
