@@ -12,13 +12,16 @@
     "lint:fix": "npm run lint -- --fix",
     "postinstall": "jetifier",
     "release": "standard-version -a",
+    "reset:cache": "npm run start -- --reset-cache",
+    "reset:cache:android": "cd android && ./gradlew clean && npm run reset:cache",
     "start": "react-native start",
     "sonarqube": "gulp sonarqube",
-    "test": "jest --logHeapUsage "
+    "test": "jest --logHeapUsage"
   },
   "dependencies": {
     "react": "17.0.1",
-    "react-native": "0.64.0"
+    "react-native": "0.64.0",
+    "react-native-config": "1.4.2"
   },
   "devDependencies": {
     "@babel/core": "7.12.9",
@@ -36,7 +39,7 @@
     "babel-jest": "26.6.3",
     "babel-plugin-module-resolver": "4.1.0",
     "coveralls": "3.1.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "8.2.0",
     "enzyme": "3.11.0",
     "enzyme-to-json": "3.6.1",
     "eslint": "7.14.0",
