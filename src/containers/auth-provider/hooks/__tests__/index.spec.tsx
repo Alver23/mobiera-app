@@ -3,14 +3,14 @@ import React, { Dispatch } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 // Under test file
-import useAuth from '../index';
+import useAuth, { useAuthSession } from '../index';
 
 describe('Auth Provider Hooks', () => {
-  describe('useAuth', () => {
-    beforeEach(() => {
-      jest.clearAllMocks();
-    });
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
 
+  describe('useAuth', () => {
     it('should get the data of an authenticated user', () => {
       const { result } = renderHook(() => useAuth());
       const [, logout] = result.current;
@@ -26,6 +26,15 @@ describe('Auth Provider Hooks', () => {
         logout();
       });
       expect(mockState[1]).toHaveBeenCalled();
+    });
+  });
+
+  describe('useAuthSession', () => {
+    it('should get context for authentication', () => {
+      const mockData = { user: { name: 'fake name' } };
+      jest.spyOn(React, 'useContext').mockReturnValue(mockData);
+      const { result } = renderHook(() => useAuthSession());
+      expect(result.current).toEqual(mockData);
     });
   });
 });
