@@ -2,6 +2,7 @@
 import './core/icon';
 
 // Dependencies
+import 'react-native-gesture-handler';
 import React, { ReactElement } from 'react';
 import { ThemeProvider, Text } from 'react-native-elements';
 import { SafeAreaView, StatusBar, useColorScheme, View } from 'react-native';

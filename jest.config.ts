@@ -29,8 +29,10 @@ export default {
     ],
   ],
   roots: ['<rootDir>/src'],
-  setupFilesAfterEnv: ['<rootDir>/config/jest/setup.js'],
+  setupFiles: ['<rootDir>/config/jest/setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testResultsProcessor: 'jest-sonar-reporter',
-  transformIgnorePatterns: ['node_modules/(?!react-native)/'],
+  transformIgnorePatterns: [
+    'node_modules/(?!react-native|@react-native-community|react-native-elements|@react-navigation)/',
+  ],
 };
