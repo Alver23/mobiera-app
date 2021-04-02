@@ -5,7 +5,6 @@
 
 export default {
   preset: 'react-native',
-  clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
@@ -33,4 +32,5 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/config/jest/setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testResultsProcessor: 'jest-sonar-reporter',
+  transformIgnorePatterns: ['node_modules/(?!react-native)/'],
 };

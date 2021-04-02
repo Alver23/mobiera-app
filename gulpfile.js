@@ -11,7 +11,6 @@ const sonarOptions = {
 };
 
 gulp.task('sonarqube', callback => {
-  console.log('process.env.SONARQUBE_HOST_URL', process.env.SONARQUBE_HOST_URL)
   sonarqubeScanner(
     {
       options: sonarOptions,
