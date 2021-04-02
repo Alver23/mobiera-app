@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/Alver23/mobiera-app/compare/v0.1.1...v0.1.2) (2021-04-02)
+
+
+### Features
+
+* **refactor:** fixed linter store index ([99fa42a](https://github.com/Alver23/mobiera-app/commit/99fa42a1ab372f9ad8bf3ed8a0265f4dc733c2ff))
+* added configuration for react native elements ([1d3711a](https://github.com/Alver23/mobiera-app/commit/1d3711a8496438ed553c00328ebcb75078dec1d8))
+* added configuration for react navigation ([3938bd4](https://github.com/Alver23/mobiera-app/commit/3938bd4372c2df2957cb5b421e99af39da1a81f4))
+* added configuration for react redux ([1cb6251](https://github.com/Alver23/mobiera-app/commit/1cb6251b79fe31a0187a0189008e747436c02d50))
+* added configuration for react redux ([0bb4367](https://github.com/Alver23/mobiera-app/commit/0bb4367b79904e5391e56f79b5a570f92982abf0))
+* added dependency for react native elements ([2c6707f](https://github.com/Alver23/mobiera-app/commit/2c6707f0129f733f4828905eb69b0a38a8f147b0))
+* **refactor:** added environment variables in ci.yml workflow ([239dfec](https://github.com/Alver23/mobiera-app/commit/239dfec9c341300664568aecaa6dd1f9c06ebaac))
+* **refactor:** added step for create .env file ([654da90](https://github.com/Alver23/mobiera-app/commit/654da90fb3d47786b747a760848f9e64cd2aead4))
+* **refactor:** added step for create .env file ([0c88b09](https://github.com/Alver23/mobiera-app/commit/0c88b0962f1de9b0094ab8f18b739522f288fbaa))
+* **refactor:** added step for create .env file in the ci.yml and commit.yml ([e00c118](https://github.com/Alver23/mobiera-app/commit/e00c118c17b5021d35355cdf9dc153a5760d10a2))
+* **refactor:** adjust in github actions workflows ([289a1b2](https://github.com/Alver23/mobiera-app/commit/289a1b2e1b68f63d8b00b459acc055ef7a2e99d8))
+* added react native config to project ([9a28c70](https://github.com/Alver23/mobiera-app/commit/9a28c70cdaee3fa6331a5371ca1f49001b832123))
+
 ### [0.1.1](https://github.com/Alver23/mobiera-app/compare/v0.1.0...v0.1.1) (2021-04-02)
 
 ## [0.1.0](https://github.com/Alver23/mobiera-app/compare/v0.0.2...v0.1.0) (2021-04-02)
