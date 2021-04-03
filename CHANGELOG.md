@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/Alver23/mobiera-app/compare/v0.2.0...v0.2.1) (2021-04-03)
+
+
+### Features
+
+* added app, and auth stack navigation ([5b2b12d](https://github.com/Alver23/mobiera-app/commit/5b2b12d599d8c50f19a77ff6810a7f652f5aca3f))
+* added authentication service ([7b3ed29](https://github.com/Alver23/mobiera-app/commit/7b3ed29d84019b399afa9f57e59a1c23baa1f29a))
+* added login screen ([5516f9d](https://github.com/Alver23/mobiera-app/commit/5516f9d8bb54cad8fd57d99169387dc42b5b4781))
+* **refactor:** was file move 'response Interceptor' ([0d0a720](https://github.com/Alver23/mobiera-app/commit/0d0a720e691ef9e1301768323bb22bd013f77ef0))
+* added reducer for management global loader ([72e2cf8](https://github.com/Alver23/mobiera-app/commit/72e2cf8eabf38adae59e595b165e994a4acc60a8))
+* **refactor:** remove gorrito dependencier ([1dfb413](https://github.com/Alver23/mobiera-app/commit/1dfb4131acf287b71383eccb60c987d528021750))
+* added auth provider ([223214f](https://github.com/Alver23/mobiera-app/commit/223214fb690f4d5a1dd373bf71c3944e15e5a40c))
+* added configuration for axios and connector ([5635c16](https://github.com/Alver23/mobiera-app/commit/5635c168796d840f90d9626457ecde3167d88a3c))
+
 ## [0.2.0](https://github.com/Alver23/mobiera-app/compare/v0.1.1...v0.2.0) (2021-04-02)
 
 
