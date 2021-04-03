@@ -1,14 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App Component should save a snapshot of the component 1`] = `
-<Provider
+<mockConstructor
   store={
     Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
     }
   }
 >
@@ -34,6 +31,7 @@ exports[`App Component should save a snapshot of the component 1`] = `
           },
           "inputContainerStyle": Array [
             Object {
+              "alignItems": "center",
               "backgroundColor": "#ffffff",
               "borderRadius": 5,
               "borderWidth": 2,
@@ -56,31 +54,23 @@ exports[`App Component should save a snapshot of the component 1`] = `
             "fontSize": 15,
           },
         },
-        "colors": Object {
-          "white": "#ffffff",
-        },
       }
     }
     useDark={false}
   >
-    <ForwardRef(SafeAreaView)
-      style={
-        Object {
-          "backgroundColor": "#F3F3F3",
+    <mockConstructor>
+      <ForwardRef(SafeAreaView)
+        style={
+          Object {
+            "backgroundColor": "#F3F3F3",
+            "flex": 1,
+          }
         }
-      }
-    >
-      <StatusBar
-        animated={false}
-        barStyle="dark-content"
-        showHideTransition="fade"
-      />
-      <View>
-        <Themed.Text>
-          App Mobiera
-        </Themed.Text>
-      </View>
-    </ForwardRef(SafeAreaView)>
+      >
+        <StatusBarComponent />
+        <mockConstructor />
+      </ForwardRef(SafeAreaView)>
+    </mockConstructor>
   </ThemeProvider>
-</Provider>
+</mockConstructor>
 `;

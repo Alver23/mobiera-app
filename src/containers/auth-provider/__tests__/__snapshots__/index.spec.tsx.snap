@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AuthProvider /> should save a snapshot of the component 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "authenticated": false,
+      "initialize": true,
+      "logout": [MockFunction],
+    }
+  }
+>
+  <FakeComponent />
+</ContextProvider>
+`;

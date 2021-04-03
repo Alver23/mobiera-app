@@ -19,6 +19,7 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    'class-methods-use-this': 0,
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -26,5 +27,7 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-useless-constructor': 0,
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
 };

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RegisterScreen /> should save a snapshot of the component 1`] = `
+<View>
+  <Themed.Text>
+    RegisterScreen
+  </Themed.Text>
+  <Themed.Button
+    onPress={[Function]}
+    title="Log in"
+    type="outline"
+  />
+</View>
+`;

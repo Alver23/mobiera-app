@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AuthStack /> should save a snapshot of the component 1`] = `
+<ForwardRef(NavigationContainer)>
+  <StackNavigator>
+    <Screen
+      component={[Function]}
+      name="Login"
+      options={
+        Object {
+          "title": "Log in",
+        }
+      }
+    />
+    <Screen
+      component={[Function]}
+      name="Register"
+      options={
+        Object {
+          "title": "Sign up",
+        }
+      }
+    />
+  </StackNavigator>
+</ForwardRef(NavigationContainer)>
+`;

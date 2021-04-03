@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppStack /> should save a snapshot of the component 1`] = `
+<ForwardRef(NavigationContainer)
+  theme={
+    Object {
+      "colors": Object {
+        "background": "rgb(242, 242, 242)",
+        "border": "rgb(216, 216, 216)",
+        "card": "rgb(255, 255, 255)",
+        "notification": "rgb(255, 59, 48)",
+        "primary": "rgb(0, 122, 255)",
+        "text": "rgb(28, 28, 30)",
+      },
+      "dark": false,
+    }
+  }
+>
+  <StackNavigator
+    initialRouteName="Home"
+  >
+    <Screen
+      component={[Function]}
+      name="Home"
+      options={
+        Object {
+          "headerShown": false,
+        }
+      }
+    />
+  </StackNavigator>
+</ForwardRef(NavigationContainer)>
+`;

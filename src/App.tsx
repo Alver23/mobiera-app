@@ -6,32 +6,40 @@ import './core/tools/reactotron';
 import 'react-native-gesture-handler';
 import React, { ReactElement } from 'react';
 import { Provider } from 'react-redux';
-import { ThemeProvider, Text } from 'react-native-elements';
-import { SafeAreaView, StatusBar, useColorScheme, View } from 'react-native';
+import { ThemeProvider } from 'react-native-elements';
+import { SafeAreaView, useColorScheme } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
+// Components
+import StatusBar from '@mobiera/components/status-bar';
+
+// Containers
+import AuthProvider from '@mobiera/containers/auth-provider';
+import AppContainer from '@mobiera/containers/app';
+
 // Store
-import store from '@mobiera/store';
+import store from './store';
 
 // @Core
 import { theme } from './core/theme';
 
+// Styles
+import useStyles from './styles';
+
 const App = (): ReactElement => {
   const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const containerBackgroundColor = isDarkMode ? Colors.darker : Colors.lighter;
+  const styles = useStyles({ containerBackgroundColor });
 
   return (
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <SafeAreaView style={backgroundStyle}>
-          <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-          <View>
-            <Text>App Mobiera</Text>
-          </View>
-        </SafeAreaView>
+      <ThemeProvider theme={theme} useDark={isDarkMode}>
+        <AuthProvider>
+          <SafeAreaView style={styles.container}>
+            <StatusBar />
+            <AppContainer />
+          </SafeAreaView>
+        </AuthProvider>
       </ThemeProvider>
     </Provider>
   );
