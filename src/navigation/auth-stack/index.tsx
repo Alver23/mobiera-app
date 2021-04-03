@@ -13,8 +13,16 @@ const AuthStack: FC = (): ReactElement => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ title: 'Log in' }}
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterScreen}
+          options={{ title: 'Sign up' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

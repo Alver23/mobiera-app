@@ -46,6 +46,7 @@ export const theme = {
     },
     inputContainerStyle: [
       {
+        alignItems: 'center',
         borderWidth: 2,
         borderRadius: 5,
         paddingHorizontal: 10,

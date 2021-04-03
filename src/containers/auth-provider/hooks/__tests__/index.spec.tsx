@@ -1,30 +1,71 @@
 // Dependencies
 import React, { Dispatch } from 'react';
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react-hooks';
+
+// Commons
+import * as AuthCommons from '@mobiera/containers/login-form/commons';
 
 // Under test file
 import useAuth, { useAuthSession } from '../index';
 
 describe('Auth Provider Hooks', () => {
+  const userMock = { id: 1, name: 'fake name', username: 'fake' };
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   describe('useAuth', () => {
-    it('should get the data of an authenticated user', () => {
-      const { result } = renderHook(() => useAuth());
-      const [, logout] = result.current;
+    it('should get the data of an authenticated user', async () => {
+      jest.spyOn(AuthCommons, 'getAuthData').mockResolvedValue(userMock);
+      const { result, waitForNextUpdate } = renderHook(() => useAuth());
+      await waitForNextUpdate();
+      const [{ user }, logout] = result.current;
+      expect(user).toEqual(userMock);
       expect(logout).toEqual(expect.any(Function));
+    });
+
+    it('should get an error when the user not exist and initialize state', () => {
+      const mockState: [unknown, Dispatch<unknown>] = [null, jest.fn()];
+      jest
+        .spyOn(AuthCommons, 'getAuthData')
+        .mockRejectedValue(new Error('fake error'));
+      jest.spyOn(React, 'useState').mockReturnValue(mockState);
+      const { result } = renderHook(() => useAuth());
+      expect(result.current).toEqual(
+        expect.arrayContaining([null, expect.any(Function)])
+      );
+    });
+
+    it('should get an error when the user not exist and not initialize state', () => {
+      const mockState: [unknown, Dispatch<unknown>] = [{}, jest.fn()];
+      jest
+        .spyOn(AuthCommons, 'getAuthData')
+        .mockRejectedValue(new Error('fake error'));
+      jest.spyOn(React, 'useRef').mockReturnValue({ current: false });
+      jest.spyOn(React, 'useState').mockReturnValue(mockState);
+      renderHook(() => useAuth());
+      expect(mockState[1]).not.toHaveBeenCalled();
+    });
+
+    it('should get the data of an authenticated user when the component is not mounted', () => {
+      const mockState: [unknown, Dispatch<unknown>] = [{}, jest.fn()];
+      jest.spyOn(AuthCommons, 'getAuthData').mockResolvedValue(userMock);
+      jest.spyOn(React, 'useRef').mockReturnValue({ current: false });
+      jest.spyOn(React, 'useState').mockReturnValue(mockState);
+      renderHook(() => useAuth());
+      expect(mockState[1]).not.toHaveBeenCalled();
     });
 
     it('should call the logout callback whe the user is authenticate', () => {
       const mockState: [unknown, Dispatch<unknown>] = [{}, jest.fn()];
+      jest.spyOn(AuthCommons, 'getAuthData').mockResolvedValue(userMock);
+      jest.spyOn(AuthCommons, 'clearAuthData').mockResolvedValue(null);
       jest.spyOn(React, 'useState').mockReturnValue(mockState);
-      const { result } = renderHook(() => useAuth());
-      const [, logout] = result.current;
-      act(() => {
-        logout();
-      });
+      const {
+        result: { current },
+      } = renderHook(() => useAuth());
+      const [, logout] = current;
+      logout();
       expect(mockState[1]).toHaveBeenCalled();
     });
   });

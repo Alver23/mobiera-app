@@ -3,7 +3,7 @@ import { internalAxiosInstance } from '../../axios/internal-axios-instance';
 import { ConnectorError } from '../connector-error';
 
 // Under test file
-import { Connector } from '../index';
+import Connector from '../index';
 
 describe('Connector', () => {
   let connector: Connector;

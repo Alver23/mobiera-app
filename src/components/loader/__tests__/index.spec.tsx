@@ -3,17 +3,15 @@ import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { ActivityIndicator } from 'react-native';
 
-// Components
-import StatusBar from '@mobiera/components/status-bar';
-
 // Under test file
 import Loader from '../index';
 
 describe('<Loader />', () => {
   let component: ShallowWrapper;
+  const props = { isVisible: true };
 
   beforeEach(() => {
-    component = shallow(<Loader />);
+    component = shallow(<Loader {...props} />);
   });
 
   it('should save a snapshot of the component', () => {
@@ -22,6 +20,5 @@ describe('<Loader />', () => {
 
   it('should render correctly', () => {
     expect(component.find(ActivityIndicator).exists()).toBeTruthy();
-    expect(component.find(StatusBar).exists()).toBeTruthy();
   });
 });

@@ -1,22 +1,23 @@
 // Dependencies
-import React, { ReactElement } from 'react';
-import { ActivityIndicator, View } from 'react-native';
-import { useTheme } from 'react-native-elements';
+import React, { ReactElement, FC } from 'react';
+import { ActivityIndicator } from 'react-native';
+import { useTheme, Overlay } from 'react-native-elements';
 
-// Components
-import StatusBar from '@mobiera/components/status-bar';
+// Interfaces
+import { ILoaderProps } from './interfaces';
 
 // Styles
 import useStyles from './styles';
 
-const Loader = (): ReactElement => {
+const Loader: FC<ILoaderProps> = ({
+  isVisible,
+}: ILoaderProps): ReactElement => {
   const styles = useStyles();
   const { theme }: any = useTheme();
   return (
-    <View style={[styles.container, styles.horizontal]}>
+    <Overlay isVisible={isVisible} overlayStyle={styles.container}>
       <ActivityIndicator size={'large'} color={theme.colors.primary} />
-      <StatusBar />
-    </View>
+    </Overlay>
   );
 };
 

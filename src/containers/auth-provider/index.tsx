@@ -20,7 +20,7 @@ const AuthProvider: FC<IAuthProviderProps> = ({
   const { initialize } = data;
   return (
     <AuthContext.Provider value={{ ...data, logout }}>
-      {initialize ? children : <Loader />}
+      {initialize ? children : <Loader isVisible />}
     </AuthContext.Provider>
   );
 };

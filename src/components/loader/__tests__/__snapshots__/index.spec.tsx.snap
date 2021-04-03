@@ -1,27 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Loader /> should save a snapshot of the component 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#ffffff",
-        "bottom": 0,
-        "flex": 1,
-        "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-        "zIndex": 3,
-      },
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "space-around",
-        "padding": 10,
-      },
-    ]
+<Themed.Overlay
+  isVisible={true}
+  overlayStyle={
+    Object {
+      "backgroundColor": "transparent",
+      "justifyContent": "center",
+    }
   }
 >
   <ActivityIndicator
@@ -30,6 +16,5 @@ exports[`<Loader /> should save a snapshot of the component 1`] = `
     hidesWhenStopped={true}
     size="large"
   />
-  <StatusBarComponent />
-</View>
+</Themed.Overlay>
 `;
