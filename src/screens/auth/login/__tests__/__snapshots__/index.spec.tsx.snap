@@ -1,9 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LoginScreen /> should save a snapshot of the component 1`] = `
-<View>
-  <Themed.Text>
-    LoginScreen
+<ScrollView
+  contentContainerStyle={
+    Object {
+      "flexGrow": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Themed.Text
+    h3={true}
+    style={
+      Object {
+        "color": "#43484d",
+        "paddingVertical": 8,
+        "textAlign": "center",
+      }
+    }
+  >
+    Log in to your account
   </Themed.Text>
-</View>
+  <LoginForm />
+  <Themed.Button
+    onPress={[Function]}
+    title="Sign up"
+    type="outline"
+  />
+</ScrollView>
 `;

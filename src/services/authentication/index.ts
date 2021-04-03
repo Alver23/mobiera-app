@@ -11,11 +11,7 @@ import Connector from '@mobiera/core/connector';
 import ValidationService from './validation-service';
 
 // Interfaces
-import {
-  ILoginRequest,
-  ILoginResponse,
-  IValidationService,
-} from './interfaces';
+import { ILoginRequest, IUser, IValidationService } from './interfaces';
 
 const { endpoints } = config;
 
@@ -25,16 +21,13 @@ class AuthenticationService {
     private readonly validationService: IValidationService
   ) {}
 
-  public login(payload: ILoginRequest): Promise<ILoginResponse> {
+  public login(payload: ILoginRequest): Promise<IUser> {
     const url = endpoints.login;
     return new Promise((resolve, reject): void => {
       try {
         this.validationService.validateEmail(payload.email);
         this.validationService.validatePassword(payload.password);
-        this.http
-          .post<ILoginResponse>(url, payload)
-          .then(resolve)
-          .catch(reject);
+        this.http.post<IUser>(url, payload).then(resolve).catch(reject);
       } catch (e) {
         reject(e);
       }

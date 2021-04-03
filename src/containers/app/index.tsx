@@ -20,7 +20,7 @@ const AppContainer: FC = (): ReactElement => {
   const showLoader = useSelector(selectAppLoader);
   return (
     <>
-      {showLoader && <Loader />}
+      <Loader isVisible={showLoader} />
       {authenticated && <AppStack />}
       {!authenticated && <AuthStack />}
     </>

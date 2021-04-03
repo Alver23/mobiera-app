@@ -3,7 +3,7 @@ export interface ILoginRequest {
   password: string;
 }
 
-export interface ILoginResponse {
+export interface IUser {
   id: number;
   name: string;
   username: string;
