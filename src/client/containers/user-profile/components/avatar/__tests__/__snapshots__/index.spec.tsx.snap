@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserAvatar /> should save a snapshot of the component 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "marginVertical": 12,
+    }
+  }
+>
+  <Themed.Avatar
+    containerStyle={
+      Object {
+        "borderColor": "#ffffff",
+        "borderWidth": 2,
+      }
+    }
+    rounded={true}
+    size="xlarge"
+    source={
+      Object {
+        "uri": "http://localhost/img.png",
+      }
+    }
+  />
+</View>
+`;

@@ -19,7 +19,7 @@
     "start": "react-native start",
     "sonarqube": "gulp sonarqube",
     "test": "jest --detectOpenHandles --logHeapUsage",
-    "test:watch": "npm test -- --verbose --watch --no-cache",
+    "test:watch": "npm test -- --verbose --watch",
     "server:generate": "json-server src/server/generate.js",
     "server:watch": "nodemon src/server/server.js"
   },
