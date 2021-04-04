@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/Alver23/mobiera-app/compare/v0.2.2...v0.2.3) (2021-04-04)
+
+
+### Features
+
+* update db.json ([4515b23](https://github.com/Alver23/mobiera-app/commit/4515b2348a25a643c686e5dd84db04c82da2a141))
+* was added register form screen ([2f688ed](https://github.com/Alver23/mobiera-app/commit/2f688ed3ce4953f8a4495f36b55db5ce27a27404))
+
 ### [0.2.2](https://github.com/Alver23/mobiera-app/compare/v0.2.1...v0.2.2) (2021-04-04)
 
 
