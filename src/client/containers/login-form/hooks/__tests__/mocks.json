@@ -1,0 +1,12 @@
+{
+  "user": {
+    "id": 1,
+    "avatar": "de",
+    "name": "fake name",
+    "email": "fake"
+  },
+  "userPayload": {
+    "email": "fake@fake.com",
+    "password": "123456789"
+  }
+}

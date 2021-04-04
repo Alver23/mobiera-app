@@ -11,6 +11,7 @@ const config: IConfig = {
   defaultTimeout: +Config.DEFAULT_TIMEOUT,
   endpoints: {
     login: `${API_BASE_URL}users`,
+    user: `${API_BASE_URL}users`,
   },
 };
 

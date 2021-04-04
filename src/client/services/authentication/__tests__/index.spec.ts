@@ -2,7 +2,7 @@
 import { internalAxiosInstance } from '@mobiera/core/axios/internal-axios-instance';
 
 // Exceptions
-import UserResponse from '@mobiera/services/dto/user/response/user-response';
+import UserResponse from '@mobiera/services/user/dto/response/user-response';
 import UnauthenticatedException from '../exceptions';
 
 // Under test file

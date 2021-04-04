@@ -28,6 +28,7 @@ const useAuthentication = (): [boolean, (values: IFormData) => void] => {
         .then(async (data) => {
           await setAuthData(data);
           hideError();
+          showAppLoader(false);
           RNRestart.Restart();
         })
         .catch(() => {

@@ -8,7 +8,7 @@ import config from '@mobiera/config';
 import Connector from '@mobiera/core/connector';
 
 // Dto's
-import UserResponse from '@mobiera/services/dto/user/response/user-response';
+import UserResponse from '@mobiera/services/user/dto/response/user-response';
 
 // Exceptions
 import UnauthenticatedException from '@mobiera/services/authentication/exceptions';

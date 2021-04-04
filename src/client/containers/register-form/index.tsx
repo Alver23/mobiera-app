@@ -1,7 +1,7 @@
 // Dependencies
 import React, { ReactElement, FC } from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { Text, Button, Input, Icon } from 'react-native-elements';
+import { Button, Input, Icon, Text } from 'react-native-elements';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, Controller } from 'react-hook-form';
 
@@ -15,23 +15,24 @@ import { IFormData } from './interfaces';
 import formSchema from './form-schema';
 
 // Hooks
-import useAuthentication from './hooks';
+import useSignUp from './hooks';
 
 // Styles
 import useStyles from './styles';
 
-const LoginForm: FC = (): ReactElement => {
-  const styles = useStyles();
-  const [passwordIcon, showPassword, onChangeSetPassword] = usePasswordState();
+const RegisterForm: FC = (): ReactElement => {
   const {
     control,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<IFormData>({
     resolver: yupResolver(formSchema),
   });
+  const styles = useStyles();
 
-  const [error, onSubmit] = useAuthentication();
+  const [passwordIcon, showPassword, onChangeSetPassword] = usePasswordState();
+  const [message, onSubmit] = useSignUp(reset);
 
   return (
     <View style={styles.container}>
@@ -39,10 +40,24 @@ const LoginForm: FC = (): ReactElement => {
         control={control}
         render={({ field: { onChange, onBlur, value } }) => (
           <Input
+            autoCapitalize="words"
+            placeholder="Name"
+            onBlur={onBlur}
+            onChangeText={onChange}
+            value={value}
+            errorMessage={errors?.name?.message}
+            rightIcon={<Icon name="user-o" type="font-awesome" size={24} />}
+          />
+        )}
+        name="name"
+      />
+      <Controller
+        control={control}
+        render={({ field: { onChange, onBlur, value } }) => (
+          <Input
             autoCapitalize="none"
-            textContentType="emailAddress"
-            keyboardType="email-address"
             placeholder="Email"
+            keyboardType="email-address"
             onBlur={onBlur}
             onChangeText={onChange}
             value={value}
@@ -72,16 +87,14 @@ const LoginForm: FC = (): ReactElement => {
         )}
         name="password"
       />
-      {error && (
+      {message && (
         <View style={styles.textErrorContainer}>
-          <Text style={styles.textError}>
-            The user does not is Unauthorized
-          </Text>
+          <Text style={styles.textError}>{message}</Text>
         </View>
       )}
-      <Button title="Login" onPress={handleSubmit(onSubmit)} />
+      <Button title="Continue" onPress={handleSubmit(onSubmit)} />
     </View>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

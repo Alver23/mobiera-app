@@ -14,8 +14,10 @@ import * as authCommons from '@mobiera/containers/login-form/commons';
 // Under rest file
 import useAuthentication from '../index';
 
+// Mocks
+import mocks from './mocks.json';
+
 describe('LoginForm Hooks', () => {
-  const loginMock = { id: 1, name: 'fake name', username: 'fake' };
   const appLoaderMock: [(show: boolean) => void] = [jest.fn()];
   const stateActionMock: [boolean, () => void, () => void] = [
     false,
@@ -24,7 +26,7 @@ describe('LoginForm Hooks', () => {
   ];
 
   beforeEach(() => {
-    jest.spyOn(authenticationService, 'login').mockResolvedValue(loginMock);
+    jest.spyOn(authenticationService, 'login').mockResolvedValue(mocks.user);
 
     jest.spyOn(appHooks, 'default').mockReturnValue(appLoaderMock);
 
@@ -39,9 +41,8 @@ describe('LoginForm Hooks', () => {
 
   it('should authenticate successfully', () => {
     const { result } = renderHook(() => useAuthentication());
-    const fakeValues = { email: 'fake@fake.com', password: '123456789' };
     act(() => {
-      result.current[1](fakeValues);
+      result.current[1](mocks.userPayload);
     });
     expect(appLoaderMock[0]).toHaveBeenCalledTimes(1);
   });
@@ -51,9 +52,8 @@ describe('LoginForm Hooks', () => {
       .spyOn(authenticationService, 'login')
       .mockRejectedValue(new Error('fake errpr'));
     const { result } = renderHook(() => useAuthentication());
-    const fakeValues = { email: 'fake@fake.com', password: '123456789' };
     act(() => {
-      result.current[1](fakeValues);
+      result.current[1](mocks.userPayload);
     });
     expect(appLoaderMock[0]).toHaveBeenCalled();
   });
