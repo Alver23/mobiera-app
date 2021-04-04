@@ -4,10 +4,12 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
+    'module:babel-plugin-transform-typescript-metadata',
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
     [
       'module-resolver',
       {
-        root: ['./src'],
+        root: ['./src/client'],
         extensions: [
           '.ios.ts',
           '.android.ts',
@@ -20,7 +22,7 @@ module.exports = {
           '.json',
         ],
         alias: {
-          '@mobiera': './src',
+          '@mobiera': './src/client',
         },
       },
     ],
