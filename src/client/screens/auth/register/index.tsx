@@ -1,16 +1,26 @@
 // Dependencies
 import React, { ReactElement, FC } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Button, Text } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 
+// Containers
+import RegisterForm from '@mobiera/containers/register-form';
+
+// Styles
+import useStyles from './styles';
+
 const RegisterScreen: FC = (): ReactElement => {
   const { goBack } = useNavigation();
+  const styles = useStyles();
   return (
-    <View>
-      <Text>RegisterScreen</Text>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.title} h3>
+        Get started
+      </Text>
+      <RegisterForm />
       <Button title="Log in" type="outline" onPress={() => goBack()} />
-    </View>
+    </ScrollView>
   );
 };
 

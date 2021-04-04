@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RegisterForm /> should save a snapshot of the component 1`] = `
+<View
+  style={
+    Object {
+      "paddingVertical": 8,
+    }
+  }
+>
+  <Controller
+    control={
+      Object {
+        "controllerSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "defaultValuesRef": Object {
+          "current": Object {},
+        },
+        "fieldArrayDefaultValuesRef": Object {
+          "current": Object {},
+        },
+        "fieldArrayNamesRef": Object {
+          "current": Set {},
+        },
+        "fieldArraySubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "fieldsRef": Object {
+          "current": Object {},
+        },
+        "fieldsWithValidationRef": Object {
+          "current": Object {},
+        },
+        "formStateRef": Object {
+          "current": Object {
+            "dirtyFields": Object {},
+            "errors": Object {},
+            "isDirty": false,
+            "isSubmitSuccessful": false,
+            "isSubmitted": false,
+            "isSubmitting": false,
+            "isValid": false,
+            "isValidating": false,
+            "submitCount": 0,
+            "touchedFields": Object {},
+          },
+        },
+        "formStateSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "getFormIsDirty": [Function],
+        "isWatchAllRef": Object {
+          "current": false,
+        },
+        "readFormStateRef": Object {
+          "current": Object {
+            "dirtyFields": false,
+            "errors": "all",
+            "isDirty": false,
+            "isValid": false,
+            "isValidating": false,
+            "touchedFields": false,
+          },
+        },
+        "register": [Function],
+        "validFieldsRef": Object {
+          "current": Object {},
+        },
+        "watchFieldsRef": Object {
+          "current": Set {},
+        },
+        "watchInternal": [Function],
+        "watchSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+      }
+    }
+    name="name"
+    render={[Function]}
+  />
+  <Controller
+    control={
+      Object {
+        "controllerSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "defaultValuesRef": Object {
+          "current": Object {},
+        },
+        "fieldArrayDefaultValuesRef": Object {
+          "current": Object {},
+        },
+        "fieldArrayNamesRef": Object {
+          "current": Set {},
+        },
+        "fieldArraySubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "fieldsRef": Object {
+          "current": Object {},
+        },
+        "fieldsWithValidationRef": Object {
+          "current": Object {},
+        },
+        "formStateRef": Object {
+          "current": Object {
+            "dirtyFields": Object {},
+            "errors": Object {},
+            "isDirty": false,
+            "isSubmitSuccessful": false,
+            "isSubmitted": false,
+            "isSubmitting": false,
+            "isValid": false,
+            "isValidating": false,
+            "submitCount": 0,
+            "touchedFields": Object {},
+          },
+        },
+        "formStateSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "getFormIsDirty": [Function],
+        "isWatchAllRef": Object {
+          "current": false,
+        },
+        "readFormStateRef": Object {
+          "current": Object {
+            "dirtyFields": false,
+            "errors": "all",
+            "isDirty": false,
+            "isValid": false,
+            "isValidating": false,
+            "touchedFields": false,
+          },
+        },
+        "register": [Function],
+        "validFieldsRef": Object {
+          "current": Object {},
+        },
+        "watchFieldsRef": Object {
+          "current": Set {},
+        },
+        "watchInternal": [Function],
+        "watchSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+      }
+    }
+    name="email"
+    render={[Function]}
+  />
+  <Controller
+    control={
+      Object {
+        "controllerSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "defaultValuesRef": Object {
+          "current": Object {},
+        },
+        "fieldArrayDefaultValuesRef": Object {
+          "current": Object {},
+        },
+        "fieldArrayNamesRef": Object {
+          "current": Set {},
+        },
+        "fieldArraySubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "fieldsRef": Object {
+          "current": Object {},
+        },
+        "fieldsWithValidationRef": Object {
+          "current": Object {},
+        },
+        "formStateRef": Object {
+          "current": Object {
+            "dirtyFields": Object {},
+            "errors": Object {},
+            "isDirty": false,
+            "isSubmitSuccessful": false,
+            "isSubmitted": false,
+            "isSubmitting": false,
+            "isValid": false,
+            "isValidating": false,
+            "submitCount": 0,
+            "touchedFields": Object {},
+          },
+        },
+        "formStateSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+        "getFormIsDirty": [Function],
+        "isWatchAllRef": Object {
+          "current": false,
+        },
+        "readFormStateRef": Object {
+          "current": Object {
+            "dirtyFields": false,
+            "errors": "all",
+            "isDirty": false,
+            "isValid": false,
+            "isValidating": false,
+            "touchedFields": false,
+          },
+        },
+        "register": [Function],
+        "validFieldsRef": Object {
+          "current": Object {},
+        },
+        "watchFieldsRef": Object {
+          "current": Set {},
+        },
+        "watchInternal": [Function],
+        "watchSubjectRef": Object {
+          "current": Subject {
+            "observers": Array [],
+          },
+        },
+      }
+    }
+    name="password"
+    render={[Function]}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginBottom": 8,
+      }
+    }
+  >
+    <Themed.Text
+      style={
+        Object {
+          "color": "#ff190c",
+        }
+      }
+    >
+      message
+    </Themed.Text>
+  </View>
+  <Themed.Button
+    onPress={[Function]}
+    title="Continue"
+  />
+</View>
+`;

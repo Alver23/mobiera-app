@@ -6,7 +6,7 @@ const jsonServer = require('json-server');
 
 const PORT = process.env.API_PORT;
 const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, 'db.json'));
+const router = jsonServer.router(path.join(`${__dirname}/../..`, 'db.json'));
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
@@ -14,7 +14,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 server.use((req, res, next) => {
   if (req.method === 'POST') {
-    req.body.createdAt = Date.now();
+    req.body.createdAt = new Date();
     req.body.avatar = faker.internet.avatar();
   }
   next();
