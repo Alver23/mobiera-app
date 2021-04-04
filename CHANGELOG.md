@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/Alver23/mobiera-app/compare/v0.2.1...v0.2.2) (2021-04-04)
+
+
+### Features
+
+* added json-server and refactor login ([d0f3b02](https://github.com/Alver23/mobiera-app/commit/d0f3b02356b3b0e4f993378f1606237b53e2ff83))
+
 ### [0.2.1](https://github.com/Alver23/mobiera-app/compare/v0.2.0...v0.2.1) (2021-04-03)
 
 
