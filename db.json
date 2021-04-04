@@ -87,6 +87,14 @@
       "createdAt": "2021-04-04T05:45:02.850Z",
       "avatar": "https://cdn.fakercloud.com/avatars/matkins_128.jpg",
       "id": 11
+    },
+    {
+      "name": "Fake 2",
+      "email": "fake2@fake.com",
+      "password": "Fake01*",
+      "createdAt": "2021-04-04T17:08:11.625Z",
+      "avatar": "https://cdn.fakercloud.com/avatars/kostaspt_128.jpg",
+      "id": 12
     }
   ]
 }
