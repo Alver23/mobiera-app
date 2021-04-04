@@ -1,16 +1,19 @@
 // Dependencies
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { View } from 'react-native';
+import { Avatar } from 'react-native-elements';
 
 // Under test file
-import HomeScreen from '../index';
+import UserAvatar from '../index';
 
-describe('<HomeScreen />', () => {
+describe('<UserAvatar />', () => {
   let component: ShallowWrapper;
+  const props = {
+    image: 'http://localhost/img.png',
+  };
 
   beforeEach(() => {
-    component = shallow(<HomeScreen />);
+    component = shallow(<UserAvatar {...props} />);
   });
 
   it('should save a snapshot of the component', () => {
@@ -18,6 +21,6 @@ describe('<HomeScreen />', () => {
   });
 
   it('should render correctly', () => {
-    expect(component.find(View).exists()).toBeTruthy();
+    expect(component.find(Avatar).exists()).toBeTruthy();
   });
 });

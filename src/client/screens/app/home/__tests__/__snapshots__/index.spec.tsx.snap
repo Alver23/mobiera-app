@@ -1,12 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HomeScreen /> should save a snapshot of the component 1`] = `
-<View>
-  <Themed.Text>
-    HomeScreen
-  </Themed.Text>
+<ScrollView
+  contentContainerStyle={
+    Object {
+      "backgroundColor": "#ffffff",
+      "flex": 2,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <UserProfile />
+  </View>
   <Themed.Button
     title="Logout"
   />
-</View>
+</ScrollView>
 `;
