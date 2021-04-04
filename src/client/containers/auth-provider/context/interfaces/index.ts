@@ -6,4 +6,5 @@ export default interface IAuthContext {
   initialize: boolean;
   user?: IUser;
   logout?: () => void;
+  updateData?: (values: any) => void;
 }

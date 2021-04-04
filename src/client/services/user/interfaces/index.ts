@@ -4,6 +4,13 @@ export interface IUserRequest {
   password: string;
 }
 
+export interface IUserUpdateRequest extends IUserRequest {
+  name: string;
+  email: string;
+  avatar: string;
+}
+
 export interface IUserService {
   save(payload: IUserRequest): Promise<null>;
+  update(id: number, payload: IUserUpdateRequest): Promise<null>;
 }

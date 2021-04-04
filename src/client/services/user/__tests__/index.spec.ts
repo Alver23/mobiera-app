@@ -8,7 +8,10 @@ import UserService from '../index';
 import mocks from './mocks.json';
 
 jest.mock('@mobiera/core/axios/internal-axios-instance', () => ({
-  internalAxiosInstance: { post: jest.fn().mockResolvedValue(null) },
+  internalAxiosInstance: {
+    post: jest.fn().mockResolvedValue(null),
+    put: jest.fn().mockResolvedValue(null),
+  },
 }));
 
 describe('UserServices', () => {
@@ -21,6 +24,14 @@ describe('UserServices', () => {
       expect(internalAxiosInstance.post).toHaveBeenCalledTimes(1);
     };
 
-    return UserService.save(mocks).then(expected);
+    return UserService.save(mocks.saveReques).then(expected);
+  });
+
+  it('should the update an user', () => {
+    const expected = () => {
+      expect(internalAxiosInstance.put).toHaveBeenCalledTimes(1);
+    };
+
+    return UserService.update(1, mocks.updateRequest).then(expected);
   });
 });

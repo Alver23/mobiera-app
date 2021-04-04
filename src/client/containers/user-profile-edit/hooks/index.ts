@@ -9,17 +9,25 @@ import UserServices from '@mobiera/services/user';
 
 // Interfaces
 import { IFormData } from '@mobiera/containers/user-form/interfaces';
-import { IFormData as IPayload } from '../interfaces';
+import { IUserUpdateRequest } from '@mobiera/services/user/interfaces';
 
-const useSignUp = (): [string | undefined, (payload: IFormData) => void] => {
+const useUserUpdate = (
+  id: number,
+  callback: () => void,
+  updateData: (values: any) => void
+): [string | undefined, (payload: IFormData) => void] => {
   const [showAppLoader] = useShowAppLoader();
   const [message, setMessage] = React.useState<string>();
 
   const onSubmit = React.useCallback(
     (payload: IFormData) => {
       const onSuccess = () => {
-        setMessage('The user was created successfully');
+        setMessage('The user was updated successfully');
         showAppLoader(false);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { password, ...userPayload } = payload;
+        updateData({ user: userPayload });
+        callback();
       };
 
       const onError = () => {
@@ -28,14 +36,14 @@ const useSignUp = (): [string | undefined, (payload: IFormData) => void] => {
       };
 
       showAppLoader(true);
-      UserServices.save(payload as IPayload)
+      UserServices.update(id, payload as IUserUpdateRequest)
         .then(onSuccess)
         .catch(onError);
     },
-    [showAppLoader]
+    [id, showAppLoader, callback, updateData]
   );
 
   return [message, onSubmit];
 };
 
-export default useSignUp;
+export default useUserUpdate;
