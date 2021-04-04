@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./src/client",
     "target": "esnext",
     "module": "commonjs",
     "lib": ["es2017"],
@@ -15,12 +15,13 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "paths": {
       "@mobiera/*": ["./*"]
     },
     "skipLibCheck": false
   },
   "exclude": [
-    "node_modules", "babel.config.js", "metro.config.js", "jest.config.ts"
+    "node_modules", "babel.config.js", "metro.config.js", "jest.config.ts", "src/server/*"
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "userRequest": {
+    "email": "fake@fake.com",
+    "password": "123456"
+  },
+  "userResponse": {
+    "id": 1,
+    "name": "Dr. Susan Toy",
+    "email": "Antoinette_Kutch17@hotmail.com",
+    "avatar": "https://cdn.fakercloud.com/avatars/brajeshwar_128.jpg",
+    "password": "DB8NAXjz1eix8zG",
+    "createdAt": "2020-07-27T09:36:19.949Z"
+  }
+}
