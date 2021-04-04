@@ -3,7 +3,7 @@
   "version": "0.2.3",
   "private": true,
   "scripts": {
-    "android": "react-native run-android && npm run reactotron:enable:android",
+    "android": "react-native run-android && npm run reactotron:enable:android && adb reverse tcp:5001 tcp:5001",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "ci": "npm run lint && npm run test",
     "env": "cat ./config/environments/.env ./config/environments/.env.production > .env",
