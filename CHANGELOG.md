@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/Alver23/mobiera-app/compare/v0.2.3...v0.2.4) (2021-04-04)
+
+
+### Features
+
+* **refactor:** update variables environment ([ecff4af](https://github.com/Alver23/mobiera-app/commit/ecff4af26d5ba282d6eb64604cdf06c1c27e70bc))
+* added profile screen ([680be7f](https://github.com/Alver23/mobiera-app/commit/680be7fe3ba490acdb99b7b2c1d9ea8602d5c565))
+
 ### [0.2.3](https://github.com/Alver23/mobiera-app/compare/v0.2.2...v0.2.3) (2021-04-04)
 
 
