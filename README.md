@@ -4,21 +4,6 @@
   <a href="https://coveralls.io/github/Alver23/mobiera-app?branch=main" target="_blank">
     <img alt="Coveralls" src="https://coveralls.io/repos/github/Alver23/mobiera-app/badge.svg?branch=main" />
   </a>
-  <a href="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/dashboard?id=mobiera-app" target="_blank">
-    <img alt="Quality Gate Status" src="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/api/project_badges/measure?project=mobiera-app&metric=alert_status" />
-  </a>
-  <a href="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/dashboard?id=mobiera-app" target="_blank">
-    <img alt="Reliability Rating" src="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/api/project_badges/measure?project=mobiera-app&metric=reliability_rating" />
-  </a>
-  <a href="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/dashboard?id=mobiera-app" target="_blank">
-    <img alt="Security Rating" src="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/api/project_badges/measure?project=mobiera-app&metric=security_rating" />
-  </a>
-  <a href="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/dashboard?id=mobiera-app" target="_blank">
-    <img alt="Technical Debt" src="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/api/project_badges/measure?project=mobiera-app&metric=sqale_index" />
-  </a>
-  <a href="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/dashboard?id=mobiera-app" target="_blank">
-    <img alt="Vulnerabilities" src="http://ec2-3-214-224-80.compute-1.amazonaws.com:9000/api/project_badges/measure?project=mobiera-app&metric=vulnerabilities" />
-  </a>
   <a href="https://github.com/Alver23/mobiera-app#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -26,7 +11,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://github.com/Alver23/mobiera-app/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/Alver23/Mobiera App" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/Alver23/mobiera-app" />
   </a>
   <a href="https://twitter.com/23Alver" target="_blank">
     <img alt="Twitter: 23Alver" src="https://img.shields.io/twitter/follow/23Alver.svg?style=social" />
