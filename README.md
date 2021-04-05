@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Mobiera App 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.3.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://coveralls.io/github/Alver23/mobiera-app?branch=main" target="_blank">
     <img alt="Coveralls" src="https://coveralls.io/repos/github/Alver23/mobiera-app/badge.svg?branch=main" />
   </a>
