@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/Alver23/mobiera-app/compare/v0.2.4...v0.3.0) (2021-04-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* first stable version
+
+### Features
+
+* implement redux thunk ([d3aa6d8](https://github.com/Alver23/mobiera-app/commit/d3aa6d88e9a34f8350077cbda0a300df6afc15b9))
+
+
+### Bug Fixes
+
+* resolved code smell ([7986737](https://github.com/Alver23/mobiera-app/commit/798673732759ee68149f62b669da92515bf0dd78))
+
 ### [0.2.4](https://github.com/Alver23/mobiera-app/compare/v0.2.3...v0.2.4) (2021-04-04)
 
 
