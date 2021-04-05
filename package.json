@@ -1,7 +1,7 @@
 {
   "name": "mobieraapp",
+  "description": "Mobile app with typescript, Redux Toolkit, Hooks, api Context",
   "version": "0.3.0",
-  "private": true,
   "scripts": {
     "android": "react-native run-android && npm run reactotron:enable:android && adb reverse tcp:5001 tcp:5001",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -20,8 +20,29 @@
     "sonarqube": "gulp sonarqube",
     "test": "jest --detectOpenHandles --logHeapUsage",
     "test:watch": "npm test -- --verbose --watch",
+    "server": "node src/server/server.js",
     "server:generate": "json-server src/server/generate.js",
     "server:watch": "nodemon src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alver23/mobiera-app.git"
+  },
+  "keywords": [
+    "Redux",
+    "Typescript",
+    "React Native",
+    "Redux Toolkit",
+    "Custom Hooks",
+    "Hooks",
+    "Api Context",
+    "JSON Server",
+    "Faker Generator"
+  ],
+  "author": "Alver Grisales <viga.23@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alver23/mobiera-app/issues"
   },
   "dependencies": {
     "@hookform/resolvers": "2.0.0",
