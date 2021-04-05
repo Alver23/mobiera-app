@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/Alver23/mobiera-app/compare/v0.4.0...v1.0.0) (2021-04-05)
+
+
+### Features
+
+* update readme.md ([dee7246](https://github.com/Alver23/mobiera-app/commit/dee724630f3b45bf464b61eee045c9de6e1b06da))
+
 ## [0.4.0](https://github.com/Alver23/mobiera-app/compare/v0.3.0...v0.4.0) (2021-04-05)
 
 
