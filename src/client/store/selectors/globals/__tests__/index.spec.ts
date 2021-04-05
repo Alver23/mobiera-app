@@ -8,7 +8,7 @@ describe('selectAppLoader', () => {
   };
 
   it('should return the global state', () => {
-    const state = selectGlobalState(mockParameters);
+    const state = selectGlobalState(mockParameters as any);
     expect(state).toEqual(mockParameters.global);
   });
 

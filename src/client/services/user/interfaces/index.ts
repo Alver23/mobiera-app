@@ -5,6 +5,7 @@ export interface IUserRequest {
 }
 
 export interface IUserUpdateRequest extends IUserRequest {
+  id: number;
   name: string;
   email: string;
   avatar: string;

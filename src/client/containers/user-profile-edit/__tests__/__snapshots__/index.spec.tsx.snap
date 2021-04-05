@@ -52,6 +52,7 @@ exports[`<UserProfileEdit /> should save a snapshot of the component 1`] = `
         "email": "fake@fake.com",
         "id": 1,
         "name": "fake name",
+        "password": "1234",
       }
     }
     formSchema={
@@ -202,7 +203,7 @@ exports[`<UserProfileEdit /> should save a snapshot of the component 1`] = `
         "type": "object",
       }
     }
-    onSubmit={[MockFunction]}
+    onSubmit={[Function]}
   />
 </View>
 `;
