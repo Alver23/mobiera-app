@@ -74,6 +74,7 @@ describe('Auth Provider Hooks', () => {
         {},
         jest.fn().mockImplementation((fn) => fn()),
       ];
+      jest.spyOn(AuthCommons, 'setAuthData').mockResolvedValue(null);
       jest.spyOn(React, 'useState').mockReturnValue(mockState);
       const {
         result: { current },

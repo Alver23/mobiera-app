@@ -92,12 +92,21 @@
     },
     {
       "id": 11,
-      "name": "Fake Name Edit",
-      "email": "fake@fake.com",
+      "name": "Fake Name",
+      "email": "fake123@fake.com",
       "avatar": "https://cdn.fakercloud.com/avatars/christianoliff_128.jpg",
-      "password": "Man01*",
-      "createdAt": "2021-04-05T00:31:15.675Z",
-      "updatedAt": "2021-04-05T00:31:15.675Z"
+      "password": "Fake01*",
+      "createdAt": "2021-04-05T01:58:30.867Z",
+      "updatedAt": "2021-04-05T01:58:30.867Z"
+    },
+    {
+      "id": 12,
+      "name": "man man edit",
+      "email": "man@man.com",
+      "avatar": "https://cdn.fakercloud.com/avatars/hellofeverrrr_128.jpg",
+      "password": "Fake123",
+      "createdAt": "2021-04-05T02:00:16.111Z",
+      "updatedAt": "2021-04-05T02:00:16.111Z"
     }
   ]
 }
