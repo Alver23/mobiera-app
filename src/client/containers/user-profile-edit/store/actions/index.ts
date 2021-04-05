@@ -11,8 +11,7 @@ const userUpdate = createAsyncThunk(
   'user/update',
   async (payload: IFormData) => {
     const { id } = payload;
-    const response = await UserServices.update(id, payload);
-    return response;
+    return UserServices.update(id, payload);
   }
 );
 
