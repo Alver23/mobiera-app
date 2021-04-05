@@ -5,6 +5,7 @@ import React from 'react';
 import {
   clearAuthData,
   getAuthData,
+  setAuthData,
 } from '@mobiera/containers/login-form/commons';
 
 // Interfaces
@@ -15,7 +16,7 @@ import IAuthContext from '../context/interfaces';
 // Contexts
 import AuthContext from '../context';
 
-const useAuth = (): [IAuthContext, () => void] => {
+const useAuth = (): [IAuthContext, () => void, (values: any) => void] => {
   const initialState: IAuthContext = React.useMemo(
     () => ({
       authenticated: false,
@@ -33,13 +34,21 @@ const useAuth = (): [IAuthContext, () => void] => {
     };
   }, []);
 
-  const logout: () => void = React.useCallback((): void => {
+  const logout = React.useCallback((): void => {
     setData({ ...initialState, initialize: true });
     clearAuthData().then();
   }, [initialState]);
 
+  const updateData = React.useCallback((newValues): void => {
+    setAuthData(newValues.user).then();
+    setData((prevState) => ({
+      ...prevState,
+      ...newValues,
+    }));
+  }, []);
+
   React.useEffect((): void => {
-    const setAuthData = (user: IUser) => {
+    const onSuccess = (user: IUser) => {
       if (isMounted.current) {
         setData({
           user,
@@ -49,16 +58,16 @@ const useAuth = (): [IAuthContext, () => void] => {
       }
     };
 
-    const setError = () => {
+    const onError = () => {
       if (isMounted.current) {
         setData(initialState);
       }
     };
 
-    getAuthData().then(setAuthData).catch(setError);
+    getAuthData().then(onSuccess).catch(onError);
   }, [initialState]);
 
-  return [data, logout];
+  return [data, logout, updateData];
 };
 
 export const useAuthSession = (): IAuthContext => {

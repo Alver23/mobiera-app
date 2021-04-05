@@ -4,268 +4,179 @@ exports[`<RegisterForm /> should save a snapshot of the component 1`] = `
 <View
   style={
     Object {
-      "paddingVertical": 8,
+      "marginVertical": 8,
     }
   }
 >
-  <Controller
-    control={
-      Object {
-        "controllerSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
+  <UserForm
+    formSchema={
+      ObjectSchema {
+        "_blacklist": ReferenceSet {
+          "list": Set {},
+          "refs": Map {},
+        },
+        "_blacklistError": undefined,
+        "_excludedEdges": Array [],
+        "_nodes": Array [
+          "password",
+          "email",
+          "name",
+        ],
+        "_sortErrors": [Function],
+        "_typeError": [Function],
+        "_whitelist": ReferenceSet {
+          "list": Set {},
+          "refs": Map {},
+        },
+        "_whitelistError": undefined,
+        "conditions": Array [],
+        "deps": Array [],
+        "exclusiveTests": Object {},
+        "fields": Object {
+          "email": StringSchema {
+            "_blacklist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_blacklistError": undefined,
+            "_mutate": undefined,
+            "_typeError": [Function],
+            "_whitelist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_whitelistError": undefined,
+            "conditions": Array [],
+            "deps": Array [],
+            "exclusiveTests": Object {
+              "email": false,
+              "required": true,
+            },
+            "spec": Object {
+              "abortEarly": true,
+              "nullable": false,
+              "presence": "required",
+              "recursive": true,
+              "strict": false,
+              "strip": false,
+            },
+            "tests": Array [
+              [Function],
+              [Function],
+            ],
+            "transforms": Array [
+              [Function],
+            ],
+            "type": "string",
+          },
+          "name": StringSchema {
+            "_blacklist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_blacklistError": undefined,
+            "_mutate": undefined,
+            "_typeError": [Function],
+            "_whitelist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_whitelistError": undefined,
+            "conditions": Array [],
+            "deps": Array [],
+            "exclusiveTests": Object {
+              "required": true,
+            },
+            "spec": Object {
+              "abortEarly": true,
+              "nullable": false,
+              "presence": "required",
+              "recursive": true,
+              "strict": false,
+              "strip": false,
+            },
+            "tests": Array [
+              [Function],
+            ],
+            "transforms": Array [
+              [Function],
+            ],
+            "type": "string",
+          },
+          "password": StringSchema {
+            "_blacklist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_blacklistError": undefined,
+            "_mutate": undefined,
+            "_typeError": [Function],
+            "_whitelist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_whitelistError": undefined,
+            "conditions": Array [],
+            "deps": Array [],
+            "exclusiveTests": Object {
+              "matches": false,
+              "min": true,
+              "required": true,
+            },
+            "spec": Object {
+              "abortEarly": true,
+              "nullable": false,
+              "presence": "required",
+              "recursive": true,
+              "strict": false,
+              "strip": false,
+            },
+            "tests": Array [
+              [Function],
+              [Function],
+              [Function],
+            ],
+            "transforms": Array [
+              [Function],
+            ],
+            "type": "string",
           },
         },
-        "defaultValuesRef": Object {
-          "current": Object {},
+        "spec": Object {
+          "abortEarly": true,
+          "nullable": false,
+          "presence": "optional",
+          "recursive": true,
+          "strict": false,
+          "strip": false,
         },
-        "fieldArrayDefaultValuesRef": Object {
-          "current": Object {},
-        },
-        "fieldArrayNamesRef": Object {
-          "current": Set {},
-        },
-        "fieldArraySubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "fieldsRef": Object {
-          "current": Object {},
-        },
-        "fieldsWithValidationRef": Object {
-          "current": Object {},
-        },
-        "formStateRef": Object {
-          "current": Object {
-            "dirtyFields": Object {},
-            "errors": Object {},
-            "isDirty": false,
-            "isSubmitSuccessful": false,
-            "isSubmitted": false,
-            "isSubmitting": false,
-            "isValid": false,
-            "isValidating": false,
-            "submitCount": 0,
-            "touchedFields": Object {},
-          },
-        },
-        "formStateSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "getFormIsDirty": [Function],
-        "isWatchAllRef": Object {
-          "current": false,
-        },
-        "readFormStateRef": Object {
-          "current": Object {
-            "dirtyFields": false,
-            "errors": "all",
-            "isDirty": false,
-            "isValid": false,
-            "isValidating": false,
-            "touchedFields": false,
-          },
-        },
-        "register": [Function],
-        "validFieldsRef": Object {
-          "current": Object {},
-        },
-        "watchFieldsRef": Object {
-          "current": Set {},
-        },
-        "watchInternal": [Function],
-        "watchSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
+        "tests": Array [],
+        "transforms": Array [
+          [Function],
+        ],
+        "type": "object",
       }
     }
-    name="name"
-    render={[Function]}
-  />
-  <Controller
-    control={
-      Object {
-        "controllerSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "defaultValuesRef": Object {
-          "current": Object {},
-        },
-        "fieldArrayDefaultValuesRef": Object {
-          "current": Object {},
-        },
-        "fieldArrayNamesRef": Object {
-          "current": Set {},
-        },
-        "fieldArraySubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "fieldsRef": Object {
-          "current": Object {},
-        },
-        "fieldsWithValidationRef": Object {
-          "current": Object {},
-        },
-        "formStateRef": Object {
-          "current": Object {
-            "dirtyFields": Object {},
-            "errors": Object {},
-            "isDirty": false,
-            "isSubmitSuccessful": false,
-            "isSubmitted": false,
-            "isSubmitting": false,
-            "isValid": false,
-            "isValidating": false,
-            "submitCount": 0,
-            "touchedFields": Object {},
-          },
-        },
-        "formStateSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "getFormIsDirty": [Function],
-        "isWatchAllRef": Object {
-          "current": false,
-        },
-        "readFormStateRef": Object {
-          "current": Object {
-            "dirtyFields": false,
-            "errors": "all",
-            "isDirty": false,
-            "isValid": false,
-            "isValidating": false,
-            "touchedFields": false,
-          },
-        },
-        "register": [Function],
-        "validFieldsRef": Object {
-          "current": Object {},
-        },
-        "watchFieldsRef": Object {
-          "current": Set {},
-        },
-        "watchInternal": [Function],
-        "watchSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-      }
-    }
-    name="email"
-    render={[Function]}
-  />
-  <Controller
-    control={
-      Object {
-        "controllerSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "defaultValuesRef": Object {
-          "current": Object {},
-        },
-        "fieldArrayDefaultValuesRef": Object {
-          "current": Object {},
-        },
-        "fieldArrayNamesRef": Object {
-          "current": Set {},
-        },
-        "fieldArraySubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "fieldsRef": Object {
-          "current": Object {},
-        },
-        "fieldsWithValidationRef": Object {
-          "current": Object {},
-        },
-        "formStateRef": Object {
-          "current": Object {
-            "dirtyFields": Object {},
-            "errors": Object {},
-            "isDirty": false,
-            "isSubmitSuccessful": false,
-            "isSubmitted": false,
-            "isSubmitting": false,
-            "isValid": false,
-            "isValidating": false,
-            "submitCount": 0,
-            "touchedFields": Object {},
-          },
-        },
-        "formStateSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-        "getFormIsDirty": [Function],
-        "isWatchAllRef": Object {
-          "current": false,
-        },
-        "readFormStateRef": Object {
-          "current": Object {
-            "dirtyFields": false,
-            "errors": "all",
-            "isDirty": false,
-            "isValid": false,
-            "isValidating": false,
-            "touchedFields": false,
-          },
-        },
-        "register": [Function],
-        "validFieldsRef": Object {
-          "current": Object {},
-        },
-        "watchFieldsRef": Object {
-          "current": Set {},
-        },
-        "watchInternal": [Function],
-        "watchSubjectRef": Object {
-          "current": Subject {
-            "observers": Array [],
-          },
-        },
-      }
-    }
-    name="password"
-    render={[Function]}
-  />
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "marginBottom": 8,
-      }
-    }
+    onSubmit={[MockFunction]}
   >
-    <Themed.Text
+    <View
       style={
         Object {
-          "color": "#ff190c",
+          "alignItems": "center",
+          "marginBottom": 8,
         }
       }
     >
-      message
-    </Themed.Text>
-  </View>
-  <Themed.Button
-    onPress={[Function]}
-    title="Continue"
-  />
+      <Themed.Text
+        style={
+          Object {
+            "color": "#ff190c",
+          }
+        }
+      >
+        message
+      </Themed.Text>
+    </View>
+  </UserForm>
 </View>
 `;

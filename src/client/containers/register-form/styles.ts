@@ -3,7 +3,7 @@ import { makeStyles } from 'react-native-elements';
 
 const styles = makeStyles((theme: any) => ({
   container: {
-    paddingVertical: 8,
+    marginVertical: 8,
   },
   textErrorContainer: {
     alignItems: 'center',

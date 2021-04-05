@@ -9,6 +9,9 @@ const styles = makeStyles((theme: any) => ({
     flex: 2,
     backgroundColor: theme.colors.white,
   },
+  buttonContainer: {
+    marginVertical: 4,
+  },
 }));
 
 export default styles;

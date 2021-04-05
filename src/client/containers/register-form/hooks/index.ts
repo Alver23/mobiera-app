@@ -8,11 +8,10 @@ import useShowAppLoader from '@mobiera/hooks/app-loader';
 import UserServices from '@mobiera/services/user';
 
 // Interfaces
-import { IFormData } from '../interfaces';
+import { IFormData } from '@mobiera/containers/user-form/interfaces';
+import { IFormData as IPayload } from '../interfaces';
 
-const useSignUp = (
-  callback: () => void
-): [string | undefined, (payload: IFormData) => void] => {
+const useSignUp = (): [string | undefined, (payload: IFormData) => void] => {
   const [showAppLoader] = useShowAppLoader();
   const [message, setMessage] = React.useState<string>();
 
@@ -21,7 +20,6 @@ const useSignUp = (
       const onSuccess = () => {
         setMessage('The user was created successfully');
         showAppLoader(false);
-        callback();
       };
 
       const onError = () => {
@@ -30,9 +28,11 @@ const useSignUp = (
       };
 
       showAppLoader(true);
-      UserServices.save(payload).then(onSuccess).catch(onError);
+      UserServices.save(payload as IPayload)
+        .then(onSuccess)
+        .catch(onError);
     },
-    [showAppLoader, callback]
+    [showAppLoader]
   );
 
   return [message, onSubmit];

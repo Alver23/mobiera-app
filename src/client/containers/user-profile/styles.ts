@@ -24,6 +24,9 @@ const styles = makeStyles((theme: any) => ({
     color: theme.colors.black,
     marginVertical: 12,
   },
+  buttonContainer: {
+    marginVertical: 12,
+  },
 }));
 
 export default styles;

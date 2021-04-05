@@ -28,6 +28,15 @@ exports[`<AppStack /> should save a snapshot of the component 1`] = `
         }
       }
     />
+    <Screen
+      component={[Function]}
+      name="edit-user"
+      options={
+        Object {
+          "title": "Edit form",
+        }
+      }
+    />
   </StackNavigator>
 </ForwardRef(NavigationContainer)>
 `;
