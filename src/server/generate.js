@@ -3,13 +3,15 @@ module.exports = function () {
   const times = require('lodash.times');
   return {
     users: times(10, function (index) {
+      const now = faker.date.past();
       return {
         id: index + 1,
         name: faker.name.findName(),
         email: faker.internet.email(),
         avatar: faker.internet.avatar(),
         password: faker.internet.password(),
-        createdAt: faker.date.past(),
+        createdAt: now,
+        updatedAt: now,
       };
     }),
   };

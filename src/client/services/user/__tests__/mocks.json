@@ -1,5 +1,13 @@
 {
-  "name": "fake name",
-  "email": "fake@fake.com",
-  "password": "123"
+  "saveReques": {
+    "name": "fake name",
+    "email": "fake@fake.com",
+    "password": "123"
+  },
+  "updateRequest": {
+    "name": "fake name",
+    "email": "fake@fake.com",
+    "password": "123",
+    "avatar": "http://localhost/img.png"
+  }
 }

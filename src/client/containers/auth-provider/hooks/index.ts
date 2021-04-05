@@ -15,7 +15,7 @@ import IAuthContext from '../context/interfaces';
 // Contexts
 import AuthContext from '../context';
 
-const useAuth = (): [IAuthContext, () => void] => {
+const useAuth = (): [IAuthContext, () => void, (values: any) => void] => {
   const initialState: IAuthContext = React.useMemo(
     () => ({
       authenticated: false,
@@ -33,10 +33,17 @@ const useAuth = (): [IAuthContext, () => void] => {
     };
   }, []);
 
-  const logout: () => void = React.useCallback((): void => {
+  const logout = React.useCallback((): void => {
     setData({ ...initialState, initialize: true });
     clearAuthData().then();
   }, [initialState]);
+
+  const updateData = React.useCallback((newValues): void => {
+    setData((prevState) => ({
+      ...prevState,
+      ...newValues,
+    }));
+  }, []);
 
   React.useEffect((): void => {
     const setAuthData = (user: IUser) => {
@@ -58,7 +65,7 @@ const useAuth = (): [IAuthContext, () => void] => {
     getAuthData().then(setAuthData).catch(setError);
   }, [initialState]);
 
-  return [data, logout];
+  return [data, logout, updateData];
 };
 
 export const useAuthSession = (): IAuthContext => {

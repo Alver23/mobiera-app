@@ -1,26 +1,25 @@
 // Dependencies
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { View } from 'react-native';
-import { Button } from 'react-native-elements';
+import { Button, Text } from 'react-native-elements';
 import * as NavigationHooks from '@react-navigation/native';
 
 // Under test file
-import HomeScreen from '../index';
+import UserEditForm from '../index';
 
 // Mocks
 jest.mock('@react-navigation/native');
 
-describe('<HomeScreen />', () => {
+describe('<UserEditForm />', () => {
   let component: ShallowWrapper;
 
   const navigation: any = {
-    navigate: jest.fn(),
+    goBack: jest.fn(),
   };
 
   beforeEach(() => {
     jest.spyOn(NavigationHooks, 'useNavigation').mockReturnValue(navigation);
-    component = shallow(<HomeScreen />);
+    component = shallow(<UserEditForm />);
   });
 
   it('should save a snapshot of the component', () => {
@@ -28,13 +27,13 @@ describe('<HomeScreen />', () => {
   });
 
   it('should render correctly', () => {
-    expect(component.find(View).exists()).toBeTruthy();
+    expect(component.find(Text).exists()).toBeTruthy();
   });
 
   it('should navigate to the screen edit user', () => {
-    const onPress = component.find(Button).at(1).prop('onPress');
+    const onPress = component.find(Button).prop('onPress');
     onPress();
 
-    expect(navigation.navigate).toHaveBeenCalledTimes(1);
+    expect(navigation.goBack).toHaveBeenCalledTimes(1);
   });
 });

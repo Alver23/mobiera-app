@@ -9,7 +9,7 @@ import * as AuthCommons from '@mobiera/containers/login-form/commons';
 import useAuth, { useAuthSession } from '../index';
 
 describe('Auth Provider Hooks', () => {
-  const userMock = { id: 1, name: 'fake name', username: 'fake' };
+  const userMock = { id: 1, name: 'fake name', email: 'fake', avatar: '' };
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -56,7 +56,7 @@ describe('Auth Provider Hooks', () => {
       expect(mockState[1]).not.toHaveBeenCalled();
     });
 
-    it('should call the logout callback whe the user is authenticate', () => {
+    it('should call the logout callback when the user is authenticate', () => {
       const mockState: [unknown, Dispatch<unknown>] = [{}, jest.fn()];
       jest.spyOn(AuthCommons, 'getAuthData').mockResolvedValue(userMock);
       jest.spyOn(AuthCommons, 'clearAuthData').mockResolvedValue(null);
@@ -66,6 +66,20 @@ describe('Auth Provider Hooks', () => {
       } = renderHook(() => useAuth());
       const [, logout] = current;
       logout();
+      expect(mockState[1]).toHaveBeenCalled();
+    });
+
+    it('should call the updateData', () => {
+      const mockState: [unknown, Dispatch<unknown>] = [
+        {},
+        jest.fn().mockImplementation((fn) => fn()),
+      ];
+      jest.spyOn(React, 'useState').mockReturnValue(mockState);
+      const {
+        result: { current },
+      } = renderHook(() => useAuth());
+      const [, , updateData] = current;
+      updateData({});
       expect(mockState[1]).toHaveBeenCalled();
     });
   });

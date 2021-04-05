@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RegisterForm /> should save a snapshot of the component 1`] = `
+exports[`<UserProfileEdit /> should save a snapshot of the component 1`] = `
 <View
   style={
     Object {
@@ -8,7 +8,52 @@ exports[`<RegisterForm /> should save a snapshot of the component 1`] = `
     }
   }
 >
+  <View>
+    <UserAvatar
+      image="http://localhost/img.png"
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "bottom": 24,
+          "flex": 1,
+          "position": "absolute",
+          "width": "70%",
+        }
+      }
+    >
+      <Themed.Icon
+        containerStyle={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderRadius": 20,
+            "elevation": 4,
+            "padding": 4,
+            "shadowColor": "#242424",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 12,
+          }
+        }
+        name="edit"
+        size={32}
+        type="material"
+      />
+    </View>
+  </View>
   <UserForm
+    defaultValues={
+      Object {
+        "avatar": "http://localhost/img.png",
+        "email": "fake@fake.com",
+        "id": 1,
+        "name": "fake name",
+      }
+    }
     formSchema={
       ObjectSchema {
         "_blacklist": ReferenceSet {
@@ -158,25 +203,6 @@ exports[`<RegisterForm /> should save a snapshot of the component 1`] = `
       }
     }
     onSubmit={[MockFunction]}
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "marginBottom": 8,
-        }
-      }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "color": "#ff190c",
-          }
-        }
-      >
-        message
-      </Themed.Text>
-    </View>
-  </UserForm>
+  />
 </View>
 `;

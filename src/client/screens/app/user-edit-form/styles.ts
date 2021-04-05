@@ -2,15 +2,15 @@
 import { makeStyles } from 'react-native-elements';
 
 const styles = makeStyles((theme: any) => ({
-  container: {
-    flex: 1,
-  },
   scrollContainer: {
-    flex: 2,
     backgroundColor: theme.colors.white,
+    flexGrow: 1,
+    justifyContent: 'center',
   },
-  buttonContainer: {
-    marginVertical: 4,
+  title: {
+    color: theme.colors.grey1,
+    paddingVertical: 8,
+    textAlign: 'center',
   },
 }));
 

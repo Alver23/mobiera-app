@@ -2,7 +2,11 @@
 import { internalAxiosInstance } from '@mobiera/core/axios/internal-axios-instance';
 
 // Interfaces
-import { IUserService, IUserRequest } from '@mobiera/services/user/interfaces';
+import {
+  IUserService,
+  IUserRequest,
+  IUserUpdateRequest,
+} from '@mobiera/services/user/interfaces';
 
 // Config
 import config from '@mobiera/config';
@@ -18,6 +22,11 @@ class UserService implements IUserService {
   save(payload: IUserRequest): Promise<null> {
     const url = endpoints.user;
     return this.http.post(url, payload);
+  }
+
+  update(id: number, payload: IUserUpdateRequest): Promise<null> {
+    const url = `${endpoints.user}/${id}`;
+    return this.http.put(url, payload);
   }
 }
 

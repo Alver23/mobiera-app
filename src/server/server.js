@@ -13,9 +13,16 @@ server.use(middlewares);
 
 server.use(jsonServer.bodyParser);
 server.use((req, res, next) => {
+  const now = new Date();
   if (req.method === 'POST') {
-    req.body.createdAt = new Date();
+    req.body.createdAt = now;
+    req.body.updatedAt = now;
     req.body.avatar = faker.internet.avatar();
+  }
+
+  if (req.method === 'PUT') {
+    req.body.createdAt = now;
+    req.body.updatedAt = now;
   }
   next();
 });

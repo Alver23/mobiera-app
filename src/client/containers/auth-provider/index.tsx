@@ -16,10 +16,10 @@ import IAuthProviderProps from './interfaces';
 const AuthProvider: FC<IAuthProviderProps> = ({
   children,
 }: IAuthProviderProps): ReactElement => {
-  const [data, logout] = useAuth();
+  const [data, logout, updateData] = useAuth();
   const { initialize } = data;
   return (
-    <AuthContext.Provider value={{ ...data, logout }}>
+    <AuthContext.Provider value={{ ...data, logout, updateData }}>
       {initialize ? children : <Loader isVisible />}
     </AuthContext.Provider>
   );
