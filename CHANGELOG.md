@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/Alver23/mobiera-app/compare/v0.3.0...v0.4.0) (2021-04-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* added readmed and generate final version
+
+### Features
+
+* added command for copy variables prod ([6634427](https://github.com/Alver23/mobiera-app/commit/6634427a65c345bc51e82e0e049f5c85c0075631))
+* was added documentation ([968c050](https://github.com/Alver23/mobiera-app/commit/968c05020068b4e47de7811185bb5e9013153b47))
+
 ## [0.3.0](https://github.com/Alver23/mobiera-app/compare/v0.2.4...v0.3.0) (2021-04-05)
 
 
