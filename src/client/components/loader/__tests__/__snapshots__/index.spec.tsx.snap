@@ -7,6 +7,7 @@ exports[`<Loader /> should save a snapshot of the component 1`] = `
     Object {
       "backgroundColor": "transparent",
       "justifyContent": "center",
+      "shadowColor": "transparent",
     }
   }
 >
