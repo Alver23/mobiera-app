@@ -5,6 +5,7 @@ const styles = makeStyles(() => ({
   container: {
     backgroundColor: 'transparent',
     justifyContent: 'center',
+    shadowColor: 'transparent',
   },
 }));
 

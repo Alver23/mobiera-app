@@ -23,26 +23,30 @@ exports[`<UserProfileEdit /> should save a snapshot of the component 1`] = `
         }
       }
     >
-      <Themed.Icon
-        containerStyle={
-          Object {
-            "backgroundColor": "#ffffff",
-            "borderRadius": 20,
-            "elevation": 4,
-            "padding": 4,
-            "shadowColor": "#242424",
-            "shadowOffset": Object {
-              "height": 2,
-              "width": 0,
-            },
-            "shadowOpacity": 1,
-            "shadowRadius": 12,
+      <ForwardRef
+        onPress={[Function]}
+      >
+        <Themed.Icon
+          containerStyle={
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderRadius": 20,
+              "elevation": 4,
+              "padding": 4,
+              "shadowColor": "#242424",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 12,
+            }
           }
-        }
-        name="edit"
-        size={32}
-        type="material"
-      />
+          name="edit"
+          size={32}
+          type="material"
+        />
+      </ForwardRef>
     </View>
   </View>
   <UserForm
@@ -204,6 +208,10 @@ exports[`<UserProfileEdit /> should save a snapshot of the component 1`] = `
       }
     }
     onSubmit={[Function]}
+  />
+  <CustomImagePicker
+    onError={[Function]}
+    onSelected={[Function]}
   />
 </View>
 `;
