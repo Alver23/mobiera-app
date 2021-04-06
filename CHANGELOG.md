@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Alver23/mobiera-app/compare/v1.0.0...v1.1.0) (2021-04-06)
+
+
+### Features
+
+* update readme.md ([fdbe907](https://github.com/Alver23/mobiera-app/commit/fdbe907a87dbd01e478029f8e950141ddcc2f1d3))
+* was added functionality for taking a  photo ([c139b99](https://github.com/Alver23/mobiera-app/commit/c139b9951b4a5bd8817a254cf971620d1bef4b4c))
+
 ## [1.0.0](https://github.com/Alver23/mobiera-app/compare/v0.4.0...v1.0.0) (2021-04-05)
 
 
